@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>محاسبه‌گر | Panel-9</title>
+  <meta name="description" content="یک ماشین‌حساب PWA با ظاهر دستگاه فیزیکی، قابل نصب و آفلاین.">
+  <meta name="theme-color" content="#1c1a17">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Vazirmatn:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="device" role="application" aria-label="ماشین‌حساب">
+    <header class="brand-row">
+      <span class="brand-name">PANEL&#8209;9</span>
+      <span class="brand-tag">دستگاه محاسبه</span>
+      <button id="themeToggle" class="dial" type="button" aria-label="تغییر رنگ پنل" title="تغییر رنگ پنل">
+        <span class="dial-notch"></span>
+      </button>
+    </header>
+
+    <section class="screen" aria-live="polite">
+      <div id="history" class="screen-history"></div>
+      <div id="display" class="screen-display">۰</div>
+      <div class="screen-glass"></div>
+    </section>
+
+    <section class="pad" id="pad">
+      <button class="key key-fn" data-action="clear">AC</button>
+      <button class="key key-fn" data-action="negate">؎</button>
+      <button class="key key-fn" data-action="percent">%</button>
+      <button class="key key-op" data-op="÷">÷</button>
+
+      <button class="key key-num" data-num="7">۷</button>
+      <button class="key key-num" data-num="8">۸</button>
+      <button class="key key-num" data-num="9">۹</button>
+      <button class="key key-op" data-op="×">×</button>
+
+      <button class="key key-num" data-num="4">۴</button>
+      <button class="key key-num" data-num="5">۵</button>
+      <button class="key key-num" data-num="6">۶</button>
+      <button class="key key-op" data-op="−">−</button>
+
+      <button class="key key-num" data-num="1">۱</button>
+      <button class="key key-num" data-num="2">۲</button>
+      <button class="key key-num" data-num="3">۳</button>
+      <button class="key key-op" data-op="+">+</button>
+
+      <button class="key key-num key-zero" data-num="0">۰</button>
+      <button class="key key-num" data-action="decimal">٫</button>
+      <button class="key key-eq" data-action="equals">=</button>
+    </section>
+
+    <footer class="panel-foot">
+      <span id="statusDot" class="status-dot" aria-hidden="true"></span>
+      <span id="statusText">آماده به کار</span>
+    </footer>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
